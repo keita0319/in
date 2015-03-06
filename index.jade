@@ -1,0 +1,28 @@
+doctype html
+html(lang="en")
+  head
+    title= pageTitle
+    script(type='text/javascript').
+      if (foo) {
+         bar(1 + 5)
+      }
+  body
+    h1 Jade - node template engine
+    #container.col
+      if youAreUsingJade
+        p You are amazing
+      else
+        p Get on it!
+      p.
+        Jade is a terse and simple
+        templating language with a
+        strong focus on performance
+        and powerful features.
+a
+      - var objs = [];
+      - objs.push({name: "a", value: "1"});
+      - objs.push({name: "b", value: "2"});
+      - objs.push({name: "c", value: "3"});
+      - for (var i = 0; i < objs.length; i++) {
+        p #{objs[i].name}: #{objs[i].value}
+      - }
